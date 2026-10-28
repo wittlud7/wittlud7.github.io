@@ -22,7 +22,8 @@ export const projects=[
     "story": "去一座城市的时候，总想多留一点时间给博物馆。观物把选馆、看懂一件文物和安排一条路线，放在同一个地方。",
     "icon": "/travel.svg",
     "code": "https://github.com/wittlud7/guanwu-museum-journeys",
-    "deliveryNote": "GitHub 提供完整源码、界面截图与运行说明；服务端功能需本地运行或自行部署。"
+    "deliveryNote": "",
+    "live": "https://guanwu-museum-journeys.youngcoin22.chatgpt.site"
   },
   {
     "id": "game",
@@ -47,7 +48,8 @@ export const projects=[
     "story": "想做一个可以慢慢玩的游戏：让消除的节奏，遇上看画的耐心。于是有了从空棋盘开始的方块漫游。",
     "icon": "/game.svg",
     "code": "https://github.com/wittlud7/block-wander",
-    "deliveryNote": "GitHub 提供完整源码、界面截图与运行说明；服务端功能需本地运行或自行部署。"
+    "deliveryNote": "",
+    "live": "https://yixiao-art-club.youngcoin22.chatgpt.site"
   },
   {
     "id": "car",
@@ -72,7 +74,8 @@ export const projects=[
     "story": "“想买一辆家用车”之后，还缺哪些问题？从这句模糊的需求出发，尝试让对话连接真实的查询、比较和人工确认。",
     "icon": "/car.svg",
     "code": "https://github.com/wittlud7/used-car-growth-agent",
-    "deliveryNote": "GitHub 提供完整源码、界面截图与运行说明；服务端功能需本地运行或自行部署。"
+    "deliveryNote": "",
+    "live": "https://intent-car-agent.youngcoin22.chatgpt.site"
   },
   {
     "id": "bi",
@@ -98,7 +101,7 @@ export const projects=[
     "story": "报表里的一个变化，往往藏着很多具体的人和商品。这个工作台试着让总览数字，可以一直追溯到值得核查的对象。",
     "icon": "/bi.svg",
     "code": "https://github.com/wittlud7/ecommerce-bi-agent-demo",
-    "deliveryNote": "可直接打开 GitHub Pages 在线演示，也可查看完整源码。"
+    "deliveryNote": ""
   },
   {
     "id": "sports",
@@ -122,7 +125,8 @@ export const projects=[
     "story": "数据、阵容、战术和那些关于比赛的想象。把看球时散落的好奇心，做成一个可以研究、排兵布阵和模拟的场边工作台。",
     "icon": "/sports.svg",
     "code": "https://github.com/wittlud7/sidecourt-sports-lab",
-    "deliveryNote": "GitHub 提供完整源码、界面截图与运行说明；服务端功能需本地运行或自行部署。"
+    "deliveryNote": "",
+    "live": "https://sidecourt-sports-lab.youngcoin22.chatgpt.site"
   },
   {
     "id": "echo",
@@ -147,7 +151,8 @@ export const projects=[
     "story": "一本书、一部电影、一首歌，后来怎样留在我们身上？回声是收集这些余音的地方，也是一张留给自己表达的桌子。",
     "icon": "/echo.svg",
     "code": "https://github.com/wittlud7/echo-renaissance",
-    "deliveryNote": "GitHub 提供完整源码、界面截图与运行说明；服务端功能需本地运行或自行部署。"
+    "deliveryNote": "",
+    "live": "https://echo-cultural-universe-wit.youngcoin22.chatgpt.site/echo/#atelier"
   },
   {
     "id": "xiaoli",
@@ -156,7 +161,7 @@ export const projects=[
     "sub": "资料检索 · 原文引用 · 记忆复习",
     "process": "导入资料，分段检索并生成带引用的摘要、概念图、记忆卡和播客脚本；将追问绑定原资料并保留引用快照。",
     "value": "把资料整理、理解与复习放入连续流程，同时支持核对来源。",
-    "status": "Beta；线上入口限站点所有者登录，优先查看源码与验证。",
+    "status": "公开静态预览；完整模型服务仍限站点所有者使用。",
     "detail": "词法检索并非向量数据库；支持IndexedDB持久化、冲突与备份恢复。验证记录包含41项自动检查及14项浏览器流程。",
     "repo": "xiaoli-ai-brain",
     "title": "小理",
@@ -172,7 +177,8 @@ export const projects=[
     "story": "资料越来越多，不等于真的学会。小理尝试把导入、理解和复习连起来，让每条生成结果，都能找到原来的那一页。",
     "icon": "/xiaoli.svg",
     "code": "https://github.com/wittlud7/xiaoli-ai-brain",
-    "deliveryNote": "GitHub 提供源码、截图与验证记录，按仓库说明在本地运行。"
+    "deliveryNote": "公开预览可导入 TXT / MD、写笔记和备份；PDF、AI 生成与语音需要完整服务。",
+    "live": "https://mqm-works.youngcoin22.chatgpt.site/previews/xiaoli/"
   },
   {
     "id": "forecast",
@@ -196,7 +202,8 @@ export const projects=[
     "story": "预测没有一个永远正确的模型。这个实验室把不同方法放在同一把尺上，比较误差、服务和库存，也保留简单方法获胜的结果。",
     "icon": "/forecast.svg",
     "code": "https://github.com/wittlud7/supply-chain-planning-lab",
-    "deliveryNote": "GitHub 提供完整源码、界面截图与运行说明；服务端功能需本地运行或自行部署。"
+    "deliveryNote": "交互查看公开实验结果；切换已计算情景，不在浏览器重新求解。",
+    "live": "https://mqm-works.youngcoin22.chatgpt.site/previews/planning/"
   },
   {
     "id": "publishing",
@@ -221,6 +228,6 @@ export const projects=[
     "story": "如果把 AI 放回出版的具体流程，会改变哪些环节？用一份可以调整参数的交互方案，推演创作、经营与小团队协作的可能。",
     "icon": "/publishing.svg",
     "code": "https://github.com/wittlud7/publishing-ai-opc-concept",
-    "deliveryNote": "可直接打开 GitHub Pages 在线演示，也可查看完整源码。"
+    "deliveryNote": ""
   }
 ];

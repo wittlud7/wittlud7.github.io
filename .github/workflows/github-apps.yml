@@ -1,0 +1,57 @@
+name: Publish independent GitHub websites
+on:
+  workflow_dispatch:
+    inputs:
+      backend_origin:
+        description: Independent Cloudflare API origin (HTTPS)
+        required: true
+        type: string
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: independent-pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify independent backend
+        env:
+          API_ORIGIN: ${{ inputs.backend_origin }}
+        run: |
+          node --input-type=module -e 'const origin=process.env.API_ORIGIN;if(!/^https:\/\//.test(origin)||/chatgpt|youngcoin22/.test(origin))throw Error("Independent HTTPS backend required");const r=await fetch(origin+"/health");const d=await r.json();if(!r.ok||!d.database||!d.providers.deepseek)throw Error("Backend is not ready");'
+      - name: Install frontend build tools
+        run: npm install --no-save esbuild@0.25.12 react@19.2.6 react-dom@19.2.6 lucide-react@1.31.0 pdfjs-dist@5.5.207
+      - name: Read public project source
+        run: |
+          mkdir -p sources
+          for repo in guanwu-museum-journeys block-wander used-car-growth-agent sidecourt-sports-lab echo-renaissance xiaoli-ai-brain supply-chain-planning-lab; do
+            git clone --depth 1 "https://github.com/wittlud7/$repo.git" "sources/$repo"
+          done
+      - name: Prepare portfolio and build all project frontends
+        env:
+          BACKEND_ORIGIN: ${{ inputs.backend_origin }}
+        run: |
+          mkdir site
+          git ls-files -z | tar --null -T - -cf - | tar -C site -xf -
+          node scripts/build-frontends.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

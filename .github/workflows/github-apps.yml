@@ -26,6 +26,11 @@ jobs:
           API_ORIGIN: ${{ inputs.backend_origin }}
         run: |
           node --input-type=module -e 'const origin=process.env.API_ORIGIN;if(!/^https:\/\//.test(origin)||/chatgpt|youngcoin22/.test(origin))throw Error("Independent HTTPS backend required");const r=await fetch(origin+"/health");const d=await r.json();if(!r.ok||!d.database||!d.providers.deepseek)throw Error("Backend is not ready");'
+      - name: Verify database isolation and real AI workflows
+        env:
+          API_TEST_BASE: ${{ inputs.backend_origin }}
+          TEST_AI: '1'
+        run: node scripts/smoke-backend.mjs
       - name: Install frontend build tools
         run: npm install --no-save esbuild@0.25.12 react@19.2.6 react-dom@19.2.6 lucide-react@1.31.0 pdfjs-dist@5.5.207
       - name: Read public project source

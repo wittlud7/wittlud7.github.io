@@ -23,7 +23,7 @@ export const projects=[
     "icon": "/travel.svg",
     "code": "https://github.com/wittlud7/guanwu-museum-journeys",
     "deliveryNote": "",
-    "live": "https://guanwu-museum-journeys.youngcoin22.chatgpt.site"
+    "live": "https://wittlud7.github.io/apps/travel/"
   },
   {
     "id": "game",
@@ -49,7 +49,7 @@ export const projects=[
     "icon": "/game.svg",
     "code": "https://github.com/wittlud7/block-wander",
     "deliveryNote": "",
-    "live": "https://yixiao-art-club.youngcoin22.chatgpt.site"
+    "live": "https://wittlud7.github.io/apps/game/"
   },
   {
     "id": "car",
@@ -75,7 +75,7 @@ export const projects=[
     "icon": "/car.svg",
     "code": "https://github.com/wittlud7/used-car-growth-agent",
     "deliveryNote": "",
-    "live": "https://intent-car-agent.youngcoin22.chatgpt.site"
+    "live": "https://wittlud7.github.io/apps/car/"
   },
   {
     "id": "bi",
@@ -126,7 +126,7 @@ export const projects=[
     "icon": "/sports.svg",
     "code": "https://github.com/wittlud7/sidecourt-sports-lab",
     "deliveryNote": "",
-    "live": "https://sidecourt-sports-lab.youngcoin22.chatgpt.site"
+    "live": "https://wittlud7.github.io/apps/sports/"
   },
   {
     "id": "echo",
@@ -152,7 +152,7 @@ export const projects=[
     "icon": "/echo.svg",
     "code": "https://github.com/wittlud7/echo-renaissance",
     "deliveryNote": "",
-    "live": "https://echo-cultural-universe-wit.youngcoin22.chatgpt.site/echo/#atelier"
+    "live": "https://wittlud7.github.io/apps/echo/"
   },
   {
     "id": "xiaoli",
@@ -161,7 +161,7 @@ export const projects=[
     "sub": "资料检索 · 原文引用 · 记忆复习",
     "process": "导入资料，分段检索并生成带引用的摘要、概念图、记忆卡和播客脚本；将追问绑定原资料并保留引用快照。",
     "value": "把资料整理、理解与复习放入连续流程，同时支持核对来源。",
-    "status": "公开静态预览；完整模型服务仍限站点所有者使用。",
+    "status": "GitHub 前端与独立后端；资料保存在当前浏览器。",
     "detail": "词法检索并非向量数据库；支持IndexedDB持久化、冲突与备份恢复。验证记录包含41项自动检查及14项浏览器流程。",
     "repo": "xiaoli-ai-brain",
     "title": "小理",
@@ -177,8 +177,8 @@ export const projects=[
     "story": "资料越来越多，不等于真的学会。小理尝试把导入、理解和复习连起来，让每条生成结果，都能找到原来的那一页。",
     "icon": "/xiaoli.svg",
     "code": "https://github.com/wittlud7/xiaoli-ai-brain",
-    "deliveryNote": "公开预览可导入 TXT / MD、写笔记和备份；PDF、AI 生成与语音需要完整服务。",
-    "live": "https://mqm-works.youngcoin22.chatgpt.site/previews/xiaoli/"
+    "deliveryNote": "",
+    "live": "https://wittlud7.github.io/apps/xiaoli/"
   },
   {
     "id": "forecast",
@@ -202,8 +202,8 @@ export const projects=[
     "story": "预测没有一个永远正确的模型。这个实验室把不同方法放在同一把尺上，比较误差、服务和库存，也保留简单方法获胜的结果。",
     "icon": "/forecast.svg",
     "code": "https://github.com/wittlud7/supply-chain-planning-lab",
-    "deliveryNote": "交互查看公开实验结果；切换已计算情景，不在浏览器重新求解。",
-    "live": "https://mqm-works.youngcoin22.chatgpt.site/previews/planning/"
+    "deliveryNote": "",
+    "live": "https://wittlud7.github.io/apps/planning/"
   },
   {
     "id": "publishing",

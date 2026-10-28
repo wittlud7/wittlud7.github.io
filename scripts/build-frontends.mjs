@@ -29,6 +29,13 @@ await writeFile(out+'/apps/xiaoli/views.js',studyViews);
 // Do not imply an account or cross-device sign-in that this deployment does not offer.
 async function independentCopy(folder,id){for(const entry of await readdir(folder,{withFileTypes:true})){const path=resolve(folder,entry.name);if(entry.isDirectory()){if(entry.name!=='vendor')await independentCopy(path,id);continue;}if(!/\.(js|html)$/.test(entry.name))continue;let text=await readFile(path,'utf8');if(id==='echo')text=text.replaceAll('/echo/','/apps/echo/');text=text.replace(/\/sign(?:in|out)-with-chatgpt\?[^"'`\s<>]*/g,'https://wittlud7.github.io/apps/'+id+'/');text=text.replaceAll('使用 ChatGPT 登录','重新连接浏览器空间').replaceAll('登录后，继续在另一台设备创作。','本浏览器的云端备份。').replaceAll('你的记录，跟着你走。','本浏览器的云端备份。').replaceAll('退出登录','返回工作台');await writeFile(path,text);}}
 await independentCopy(out+'/apps/travel','travel');await independentCopy(out+'/apps/echo','echo');await independentCopy(out+'/apps/xiaoli','xiaoli');
+// Community identity is the current browser's private token, not a hosted login.
+const communityPath=out+'/apps/travel/community.js';
+let community=await readFile(communityPath,'utf8');
+community=community.replace(/function authPath\(out=false\)\{[^\n]+\}/, "function authPath(){return './#community'}");
+community=community.replace('<a class="text-link" href="${escape(authPath(true))}" target="_top">退出</a>','');
+community=community.replaceAll('登录，加入交流 ↗','重新连接交流空间 ↗').replaceAll('登录，留下你的声音。','重新连接交流空间。').replaceAll('游客可以阅读。登录后，可用自己选择的公开昵称分享、回复和点赞。','连接后，可用自己选择的公开昵称分享、回复和点赞。').replaceAll('这一步使用当前站点的登录服务；不会公开你的邮箱。','空间身份保存在此浏览器；清除浏览器数据后不会自动恢复。').replaceAll('登录后，写下你的回复。','连接后，写下你的回复。').replaceAll('登录参与交流 ↗','重新连接交流空间 ↗');
+await writeFile(communityPath,community);
 // The two React frontends are client applications; compile the original pages.
 for(const id of ['sports','car']){
  const project=src(id)+(id==='car'?'/online':''),dest=out+'/apps/'+id;
